@@ -9,7 +9,8 @@ import { fileURLToPath, URL } from 'node:url'
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: 'cordova/app/www'
+    outDir: 'dist'
+    // outDir: 'cordova/app/www' Para cordova
   },
   plugins: [
     vue({ 
