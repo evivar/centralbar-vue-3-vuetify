@@ -1,33 +1,35 @@
 <template>
   <div class="custom-search-component">
-    <input
-      name="input"
-      class="custom-search-component__input"
-      v-model="inputValue"
-      placeholder="Dirección"
-      @input="filterResults"
-      @focus="filterResults"
-      @keydown.down="selectNext"
-      @keydown.up="selectPrevious"
-      @keydown.enter="searchAddress"
-      @keyup.enter="searchAddress"
-      @keydown.enter.prevent="searchAddress"
-      @keypress.enter="searchAddress"
-    />
-    <ul
-      v-if="showSuggestions && suggestions.length > 0"
-      class="custom-search-component__results"
-      @click.stop
-    >
-      <li
-        v-for="(item, index) in suggestions"
-        :key="index"
-        @click="selectItem(item)"
-        class="custom-search-component__results--result"
+    <form>
+      <input
+        name="input"
+        class="custom-search-component__input"
+        v-model="inputValue"
+        placeholder="Dirección"
+        @input="filterResults"
+        @focus="filterResults"
+        @keydown.down="selectNext"
+        @keydown.up="selectPrevious"
+        @keydown.enter="searchAddress"
+        @keyup.enter="searchAddress"
+        @keydown.enter.prevent="searchAddress"
+        @keypress.enter="searchAddress"
+      />
+      <ul
+        v-if="showSuggestions && suggestions.length > 0"
+        class="custom-search-component__results"
+        @click.stop
       >
-        {{ item.title }}
-      </li>
-    </ul>
+        <li
+          v-for="(item, index) in suggestions"
+          :key="index"
+          @click="selectItem(item)"
+          class="custom-search-component__results--result"
+        >
+          {{ item.title }}
+        </li>
+      </ul>
+    </form>
   </div>
 </template>
 

@@ -10,10 +10,10 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
   build: {
     outDir: 'dist'
-    // outDir: 'cordova/app/www' Para cordova
+    // outDir: 'cordova/app/www' // Para cordova
   },
   plugins: [
-    vue({ 
+    vue({
       template: { transformAssetUrls }
     }),
     // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
