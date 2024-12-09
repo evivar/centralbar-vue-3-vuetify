@@ -73,7 +73,7 @@ export default {
           {
             params: {
               q: this.inputValue,
-              apiKey: "JNxY3zutNlfpt58LXnMWYgRwZoAGn5HWs2h9YoKOdeQ",
+              apiKey: import.meta.env.VITE_API_KEY_HERE,
             },
           }
         );

@@ -100,7 +100,7 @@ export default {
           `https://browse.search.hereapi.com/v1/browse?at=${this.middle.lat},${this.middle.lng}&in=circle:${this.middle.lat},${this.middle.lng};r=500&categories=100-1000,100-1100,200-2000`,
           {
             params: {
-              apiKey: "JNxY3zutNlfpt58LXnMWYgRwZoAGn5HWs2h9YoKOdeQ",
+              apiKey: import.meta.env.VITE_API_KEY_HERE,
             },
           }
         );

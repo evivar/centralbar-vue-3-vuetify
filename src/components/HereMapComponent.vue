@@ -27,7 +27,7 @@ export default {
       defaultLayers: null,
       map: null,
       ui: null,
-      apikey: "JNxY3zutNlfpt58LXnMWYgRwZoAGn5HWs2h9YoKOdeQ",
+      apikey: import.meta.env.VITE_API_KEY_HERE,
       markerInit: null,
       markerDest: null,
       resultsMarkers: [],
